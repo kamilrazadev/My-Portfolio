@@ -52,17 +52,14 @@
     </nav>
 
         <div class="sidebar-container" id="sidebar">
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center justify-content-between">
                 <h1 class="heading">
                     M<span class="secondary-color">.</span>Kamil<span class="secondary-color">Raza</span>
                 </h1>
                 
-                <input type="checkbox" id="checkbox-nav" onclick="handleSideaBarOpen()">
-                <label for="checkbox-nav" class="toggle-nav">
-                    <div class="bars" id="bar1"></div>
-                    <div class="bars" id="bar2"></div>
-                    <div class="bars" id="bar3"></div>
-                </label>
+                <span onclick="closeSideBar()">
+                    <i class="fas fa-times me-4 sidebar-cancel-btn"></i>
+                </span>
             </div>
             <div class="sidebar-content">
                 <span>

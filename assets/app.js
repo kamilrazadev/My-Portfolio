@@ -1,6 +1,9 @@
+const loaderContainer = document.getElementById("loader-container");
+
+// Sidebar Handler
+
 const sideBar = document.getElementById("sidebar");
 const navBar = document.getElementById("navbar");
-const loaderContainer = document.getElementById("loader-container");
 
 let isSidebarOpen = false;
 
@@ -14,6 +17,17 @@ function handleSideaBarOpen() {
     navBar.style.boxShadow = "0 0 5px 1px rgb(164, 164, 164)";
     isSidebarOpen = false;
   }
+}
+
+// Sidebar Closer
+
+const checkboxNav = document.getElementById("checkbox-nav");
+
+function closeSideBar() {
+  sideBar.style.left = "-100%";
+  navBar.style.boxShadow = "0 0 5px 1px rgb(164, 164, 164)";
+  isSidebarOpen = false;
+  checkboxNav.checked = false;
 }
 
 // Theme Handler
