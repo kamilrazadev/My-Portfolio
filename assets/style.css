@@ -5,6 +5,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
   --background-light: white;
   --text-dark: rgb(53, 53, 53);
