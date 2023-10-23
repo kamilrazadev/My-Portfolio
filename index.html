@@ -52,9 +52,18 @@
     </nav>
 
         <div class="sidebar-container" id="sidebar">
-            <h1 class="heading">
-                M<span class="secondary-color">.</span>Kamil<span class="secondary-color">Raza</span>
-            </h1>
+            <div class="d-flex align-items-center">
+                <h1 class="heading">
+                    M<span class="secondary-color">.</span>Kamil<span class="secondary-color">Raza</span>
+                </h1>
+                
+                <input type="checkbox" id="checkbox-nav" onclick="handleSideaBarOpen()">
+                <label for="checkbox-nav" class="toggle-nav">
+                    <div class="bars" id="bar1"></div>
+                    <div class="bars" id="bar2"></div>
+                    <div class="bars" id="bar3"></div>
+                </label>
+            </div>
             <div class="sidebar-content">
                 <span>
                     <i class="fas fa-home"></i>
