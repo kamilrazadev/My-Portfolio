@@ -14,7 +14,14 @@
 </head>
 <body>
 
-    <div class="loader-container" id="loader-container" onclick="sideBarClose()"></div>
+    <div class="loader-container" id="loader-container" onclick="sideBarClose()">
+        <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+            <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+        </svg>
+    </div>
 
     <nav id="navbar">
         <h1 class="heading">
@@ -88,6 +95,23 @@
                 </span>
             </div>
         </div>
+
+        <!-- Hero Section -->
+        <section class="hero-section d-flex justify-content-center align-items-center">
+
+            <!-- <div class="container-about-animate">
+                <div class="content">
+                  <div class="content__container">             
+                    <ul class="content__container__list">
+                      <li class="content__container__list__item"> Frontend Developer !</li>
+                      <li class="content__container__list__item"> NEXT JS Developer !</li>
+                      <li class="content__container__list__item"> Full Stack Developer ! </li>
+                      <li class="content__container__list__item"> Student Developer !</li>
+                    </ul>
+                  </div>
+                </div>
+              </div> -->
+        </section>
     
     <script src="./assets/app.js"></script>
     <!-- Bootstrap JS -->

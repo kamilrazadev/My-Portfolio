@@ -1,4 +1,10 @@
+// Starter loading handle
+
 const loaderContainer = document.getElementById("loader-container");
+
+setTimeout(() => {
+  loaderContainer.style.display = "none";
+}, 1010);
 
 // Sidebar Handler
 
