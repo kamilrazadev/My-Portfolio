@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --background-light: white;
+  --text-dark: rgb(53, 53, 53);
+
+  --background-dark: rgb(53, 53, 53);
+  --text-light: white;
+}
+
+.dark-theme, .dark-theme .sidebar-container {
+  background-color: #111111 !important;
+  transition: 500ms ease-in-out;
+}
+
+.secondary-color {
+    color: rgb(152, 0, 0);
+}
+
+.hidden {
+  display: none;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 5px 1px rgb(164, 164, 164);
+    transition: 50ms ease-in;
+}
+
+/* Theme Toggler Styles */
+
+.toggle {
+  background-color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, .1);
+  line-height: 1;
+  scale: .6;
+}
+
+.input {
+  display: none;
+}
+
+.icon {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  transition: transform 500ms;
+}
+
+.icon--moon {
+  transition-delay: 200ms;
+}
+
+.icon--sun {
+  transform: scale(0);
+}
+
+#switch:checked + .icon--moon {
+  transform: rotate(360deg) scale(0);
+}
+
+#switch:checked ~ .icon--sun {
+  transition-delay: 200ms;
+  transform: scale(1) rotate(360deg);
+}
+
+/* Sidebar Toggler Styles */
+
+#checkbox-nav {
+    display: none;
+  }
+  
+  .toggle-nav {
+    margin-right: 30px;
+    position: relative;
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    transition-duration: .5s;
+  }
+  
+  .bars {
+    width: 100%;
+    height: 4px;
+    background-color: var(--background-dark);
+    border-radius: 4px;
+  }
+
+  .dark-theme .bars {
+    background-color: var(--background-light);
+  }
+  
+  #bar2 {
+    transition-duration: .8s;
+    background-color: rgb(152, 0, 0);
+  }
+  
+  #bar1,#bar3 {
+    width: 70%;
+  }
+  
+  #checkbox-nav:checked + .toggle-nav .bars {
+    position: absolute;
+    transition-duration: .5s;
+  }
+  
+  #checkbox-nav:checked + .toggle-nav #bar2 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+  }
+  
+  #checkbox-nav:checked + .toggle-nav #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+    background-color: rgb(152, 0, 0);
+  }
+  
+  #checkbox-nav:checked + .toggle-nav #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+  }
+  
+  #checkbox-nav:checked + .toggle-nav {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+  }
+
+.sidebar-container {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    z-index: 200;
+    height: 100vh;
+    width: 300px;
+    box-shadow: 0 0 5px 1px rgb(164, 164, 164);
+    background-color: #fff;
+    transition: 300ms ease-in-out;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark);
+    padding: 20px 30px;
+}
+
+.dark-theme .heading {
+  color: var(--text-light);
+}
+
+.sidebar-content > span {
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.sidebar-content a {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    margin-left: 10px;
+}
+
+.dark-theme .sidebar-content a {
+  color: var(--text-light);
+}
+
+.sidebar-content i {
+    font-size: 20px;
+    margin-left: 30px;
+    color: rgb(152, 0, 0);
+}
+
+.sidebar-content > span:hover {
+    transition: 200ms;
+    background-color: #e1e1e186;
+}
+
+
+@media (max-width: 425px) {
+  .heading {
+    font-size: 20px;
+    padding-left: 15px;
+  }  
+  .toggle-nav {
+    width: 30px;
+    height: 24px;
+  }
+  .container {
+    position: fixed;
+    z-index: 300;
+    bottom: 10px;
+    right: 10px;
+  }
+}
