@@ -43,10 +43,6 @@ const lightThemeIcon = document.getElementById("sun");
 const darkThemeIcon = document.getElementById("moon");
 const body = document.body;
 
-// themeToggle.addEventListener("click", () => {
 function themeHandler() {
   body.classList.toggle("dark-theme");
 }
-// darkThemeIcon.classList.toggle("hidden");
-// lightThemeIcon.classList.toggle("hidden");
-// });
