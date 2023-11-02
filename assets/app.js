@@ -45,7 +45,6 @@ const body = document.body;
 
 // themeToggle.addEventListener("click", () => {
 function themeHandler() {
-  console.log("Run");
   body.classList.toggle("dark-theme");
 }
 // darkThemeIcon.classList.toggle("hidden");
