@@ -1,0 +1,1 @@
+jab side bar open ho to nav upr chala jaye with transition or ya to toggler wahin rahe nhi to phr sidebar pr jo cancel ka button hei uska display always show kardo
