@@ -264,9 +264,9 @@
 }
 
 nav {
-    position: sticky;
+    /* position: sticky;
     top: 0;
-    left: 0;
+    left: 0; */
     display: flex;
     width: 100%;
     height: max-content;
@@ -548,11 +548,11 @@ nav {
   transition: all 0.25s;
 }
 
-.social-card {
+.social-card, .social-card-sidebar {
   display: flex;
 }
 
-.social-card svg {
+.social-card svg, .social-card-sidebar svg {
   position: absolute;
   display: flex;
   width: 30px;
@@ -565,7 +565,9 @@ nav {
   cursor: pointer;
 }
 
-.social-card .social-link1,.social-card .social-link2,.social-card .social-link3,.social-card .social-link4 {
+.social-card .social-link1,.social-card .social-link2,.social-card .social-link3,.social-card .social-link4,
+.social-card-sidebar .social-link1,.social-card-sidebar .social-link2,.social-card-sidebar .social-link3,.social-card-sidebar .social-link4
+{
   position: relative;
   display: flex;
   align-items: center;
@@ -579,31 +581,31 @@ nav {
   border-radius: 50px;
 }
 
-.social-card svg {
+.social-card svg, .social-card-sidebar svg {
   transform: scale(1);
   color: #000000;
 }
 
-.dark-theme .social-card svg {
+.dark-theme .social-card svg, .dark-theme .social-card-sidebar svg {
   color: #fff;
 }
 
-.social-card .social-link1:hover {
+.social-card .social-link1:hover, .social-card-sidebar .social-link1:hover {
   background-color: #5865f2;
   animation: bounce_613 0.4s linear;
 }
 
-.social-card .social-link2:hover {
+.social-card .social-link2:hover, .social-card-sidebar .social-link2:hover {
   background-color: #00ccff;
   animation: bounce_613 0.4s linear;
 }
 
-.social-card .social-link3:hover {
+.social-card .social-link3:hover, .social-card-sidebar .social-link3:hover {
   background-color: #5865f2;
   animation: bounce_613 0.4s linear;
 }
 
-.social-card .social-link4:hover {
+.social-card .social-link4:hover, .social-card-sidebar .social-link4:hover {
   background-color: #12a50b;
   animation: bounce_613 0.4s linear;
 }
@@ -626,6 +628,12 @@ nav {
   }
 }
 
+@media (max-width: 665px) {
+  .social-card {
+    display: none;
+  }  
+}
+
 @media (max-width: 425px) {
   .heading {
     font-size: 20px;
@@ -634,14 +642,16 @@ nav {
   .toggle-nav {
     width: 30px;
     height: 24px;
+    margin-right: 15px;
   }
   .container {
     display: inline-block;
     width: fit-content;
-    position: fixed;
-    z-index: 300;
-    bottom: 10px;
-    right: 0;
+    /* position: absolute;
+    z-index: 1000;
+    top: 100px;
+    right: 0; */
+    padding: 0;
   }
   .toggle {
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, .1);
