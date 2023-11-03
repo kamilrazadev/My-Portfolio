@@ -264,9 +264,9 @@
 }
 
 nav {
-    /* position: sticky;
+    position: sticky;
     top: 0;
-    left: 0; */
+    left: 0;
     display: flex;
     width: 100%;
     height: max-content;
@@ -647,10 +647,6 @@ nav {
   .container {
     display: inline-block;
     width: fit-content;
-    /* position: absolute;
-    z-index: 1000;
-    top: 100px;
-    right: 0; */
     padding: 0;
   }
   .toggle {
