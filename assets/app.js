@@ -33,9 +33,8 @@ function handleSideaBarOpen() {
       socialLinksSidebar.forEach( (socialLink) => {
         socialLink.style.scale = "1"
       })
-    }, 300);
+    }, 400);
     sideBar.style.left = "0";
-    navBar.style.boxShadow = "none";
     isSidebarOpen = true;
   } else {
     socialLinksNavbar.forEach( (socialLink) => {
@@ -45,7 +44,6 @@ function handleSideaBarOpen() {
       socialLink.style.scale = "0"
     })
     sideBar.style.left = "-100%";
-    navBar.style.boxShadow = "0 0 5px 1px rgb(164, 164, 164)";
     isSidebarOpen = false;
   }
 }
