@@ -28,7 +28,6 @@ const socialLinksSidebar = [
 
 let isSidebarOpen = false;
 function handleSideaBarOpen() {
-  console.log("sidebar handler");
   if (!isSidebarOpen) {
     setTimeout(() => {
       socialLinksSidebar.forEach((socialLink) => {
