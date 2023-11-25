@@ -1,3 +1,12 @@
+
+:root {
+  --background-light: white;
+  --text-dark: rgb(53, 53, 53);
+
+  --background-dark: rgb(53, 53, 53);
+  --text-light: white;
+}
+
 .project-container {
   min-height: 85vh;
 }
@@ -10,6 +19,10 @@
   font-weight: 750;
   position: relative;
   width: fit-content;
+}
+
+.dark-theme .project-title {
+  color: var(--text-light);
 }
 
 .project-title::after {
